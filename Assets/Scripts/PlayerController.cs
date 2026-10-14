@@ -24,9 +24,18 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            GameObject Bullet = Instantiate(bulletPrefab);
-            Bullet.transform.position = transform.position;
-            Bullet.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bulletSpeed);
+            for (int i = 0; i < 3; i++)
+            {
+                GameObject bullet = Instantiate(bulletPrefab);
+
+                Vector3 bulletPos = transform.position;
+                bulletPos.y += 0.3f * i;
+
+                bullet.transform.position = bulletPos;
+
+                bullet.GetComponent<Rigidbody2D>()
+                    .AddForce(Vector2.up * bulletSpeed);
+            }
         }
     }
 }
