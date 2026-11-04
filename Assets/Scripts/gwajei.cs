@@ -9,7 +9,7 @@ public class gwajei : MonoBehaviour
             Debug.Log(i);
         }*/
 
-        Human Alice = new Human("Alice", 23, 160f);
+       /* Human Alice = new Human("Alice", 23, 160f);
 
         Debug.Log(Alice.name);
         Debug.Log(Alice.age);
@@ -19,7 +19,7 @@ public class gwajei : MonoBehaviour
 
         Debug.Log(John.name);
         Debug.Log(John.age);
-        Debug.Log(John.height);
+        Debug.Log(John.height);*/
     }
 
     
@@ -30,6 +30,7 @@ class Human
     public string name;
     public float height;
     public int age;
+    protected string Address;
 
     public Human()
     {
@@ -61,6 +62,10 @@ class Human
         }
     }
 
+    public int GetAge()
+    {
+        return age;
+    }
     public float Height
     {
         get
@@ -76,8 +81,8 @@ class Human
 
     public Human(string _name, int _age, float _height)
     {
-        name = _name;
-        age = _age;
+        this.name = _name;
+        this.age = _age;
         height = _height;
     }
 
