@@ -29,7 +29,21 @@ public class InheritanceExample : MonoBehaviour
 
         /*Human Bob = new Adult("Bob", 26, 165.5f);
         Adult tmpA = (Adult)Bob;*/
-    } 
+
+
+        Human Alexis = new Adult("alexis", 23, 155);
+        Adult adult_alexis = Alexis as Adult;
+
+        if (adult_alexis == null)
+        {
+            Debug.Log("형변환 실패");
+        }
+        else
+        {
+            Debug.Log("형변환 성공");
+        }
+
+    }
 }
 
 class Adult : Human

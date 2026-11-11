@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyScripts : MonoBehaviour
@@ -11,6 +12,7 @@ public class EnemyScripts : MonoBehaviour
         {
             Die();
         }
+        Debug.Log("Enemy Health : " + health);
     }
     public void TakeDamage(float ratio)
     {
@@ -37,6 +39,10 @@ public class EnemyScripts : MonoBehaviour
         {
             TakeDamage(10);
             coll.gameObject.SetActive(false);
+        }
+        if (coll.gameObject.CompareTag("Player"))
+        {
+            TakeDamage(20);
         }
     }
     

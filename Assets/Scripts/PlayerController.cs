@@ -8,7 +8,6 @@ public class PlayerController : MonoBehaviour
       
     public GameObject bulletPrefab;
     public float bulletSpeed = 100f;
-
     private void Start()
     {
          
